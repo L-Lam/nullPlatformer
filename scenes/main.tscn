@@ -946,7 +946,7 @@ _data = {
 "move": SubResource("Animation_6emna")
 }
 
-[node name="hi" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_wrifd")
 
 [node name="LightSource" type="Node" parent="."]
