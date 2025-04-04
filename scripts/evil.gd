@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var player = $"../Player"
-@export var detection_range: float = 500.0
+@export var detection_range: float = 920.0
 @export var speed: float = 400.0
 
 func _ready():
@@ -14,6 +14,9 @@ func _process(delta):
 		if distance_to_player <= detection_range:
 			var direction = (player.global_position - global_position).normalized()
 			global_position += direction * speed * delta
+	else:
+		global_position = Vector2(15030, -31880)
 
 func player_killed() -> void:
 	global_position = Vector2(15030, -31880)
+	$CPUParticles2D.restart()
