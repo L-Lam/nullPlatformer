@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://doonx7ebfk52u"]
+
+[ext_resource type="Script" path="res://scripts/orb.gd" id="1_kjc7x"]
+[ext_resource type="Texture2D" uid="uid://cbndcr25vf0bf" path="res://assets/parts/orb.png" id="2_6vfeb"]
+[ext_resource type="AudioStream" uid="uid://cpoi5386ebytp" path="res://assets/press.mp3" id="3_cjqeb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ec8l"]
+radius = 16.0
+
+[sub_resource type="Curve" id="Curve_16o6f"]
+_data = [Vector2(0.122905, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.472527), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Orb" type="Area2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_kjc7x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(20, 20)
+shape = SubResource("CircleShape2D_3ec8l")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+scale = Vector2(20, 20)
+amount = 16
+speed_scale = 0.5
+randomness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+orbit_velocity_min = 0.25
+orbit_velocity_max = 0.25
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_16o6f")
+color = Color(1, 0.764706, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6vfeb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cjqeb")
+volume_db = 5.0

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://weqljbolrafa"]
+
+[ext_resource type="Texture2D" uid="uid://bq668s5tkigeq" path="res://assets/parts/platform.png" id="1_yk5nc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po0mj"]
+size = Vector2(98, 12)
+
+[node name="Appear" type="StaticBody2D"]
+modulate = Color(1, 1, 1, 0.65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_po0mj")
+disabled = true
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+clip_children = 1
+texture = ExtResource("1_yk5nc")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 11)
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+offset_left = -48.0
+offset_top = -6.0
+offset_right = 48.0
+offset_bottom = 6.0

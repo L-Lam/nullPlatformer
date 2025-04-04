@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ahm34iu25ht"]
+
+[ext_resource type="Texture2D" uid="uid://bq668s5tkigeq" path="res://assets/parts/platform.png" id="1_qquag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po0mj"]
+size = Vector2(98, 12)
+
+[node name="Fade" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_po0mj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+clip_children = 1
+texture = ExtResource("1_qquag")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 11)
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+offset_left = -48.0
+offset_top = -6.0
+offset_right = 48.0
+offset_bottom = 6.0
+color = Color(0, 0, 0, 1)
