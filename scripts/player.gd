@@ -29,11 +29,17 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_up") and DOUBLE_JUMP > 0:
-		velocity.y = JUMP_VELOCITY
-		DOUBLE_JUMP -= 1
-		if not DOUBLE_JUMP:
-			modulate = Color(0.75, 0.75, 0.75, 1)
+	if Input.is_action_just_pressed("ui_up"):
+		if DOUBLE_JUMP > 0:
+			$AudioStreamPlayer2D.play()
+			velocity.y = JUMP_VELOCITY
+			DOUBLE_JUMP -= 1
+			if DOUBLE_JUMP:
+				modulate = Color(0.75, 0.75, 0.75, 1)
+			if not DOUBLE_JUMP:
+				modulate = Color(0.5, 0.5, 0.5, 1)
+		else:
+			$AudioStreamPlayer2D2.play()
 
 var elapse = 0
 func _process(_delta: float) -> void:

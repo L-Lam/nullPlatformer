@@ -6,7 +6,7 @@
 size = Vector2(98, 12)
 
 [node name="Appear" type="StaticBody2D"]
-modulate = Color(1, 1, 1, 0.65)
+modulate = Color(1, 1, 1, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_po0mj")

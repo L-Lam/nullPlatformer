@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func flip():
 	if modulate.a == 1:
-		modulate.a = 0.65
+		modulate.a = 0.5
 		$CollisionShape2D.set_deferred("disabled", true)
 	else:
 		modulate.a = 1

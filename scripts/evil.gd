@@ -1,11 +1,14 @@
 extends Area2D
 
 @onready var player = $"../Player"
+@onready var killzone_group = get_tree().get_nodes_in_group("killzone")
 @export var detection_range: float = 920.0
 @export var speed: float = 400.0
 
 func _ready():
 	player.player_killed.connect(player_killed)
+	for killzone in killzone_group:
+		killzone.player_killed.connect(player_killed)
 	
 func _process(delta):
 	if player and player.global_position.x < 22200:
