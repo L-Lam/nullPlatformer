@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/orb.gd" id="1_kjc7x"]
 [ext_resource type="Texture2D" uid="uid://cbndcr25vf0bf" path="res://assets/parts/orb.png" id="2_6vfeb"]
-[ext_resource type="AudioStream" uid="uid://cpoi5386ebytp" path="res://assets/press.mp3" id="3_cjqeb"]
+[ext_resource type="AudioStream" uid="uid://cpoi5386ebytp" path="res://assets/misc/press.mp3" id="3_cjqeb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ec8l"]
 radius = 16.0
