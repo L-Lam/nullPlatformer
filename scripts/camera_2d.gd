@@ -13,7 +13,7 @@ func _process(float) -> void:
 	if player.global_position.x >= 22200:
 		global_position = Vector2(23460, -32000)
 		anchor_mode = 1
-		position_smoothing_speed = false
+		position_smoothing_enabled = false
 		text.visible = true
 	else:
 		global_position.x = player.global_position.x - 960

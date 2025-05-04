@@ -1499,6 +1499,14 @@ rotation = 1.5708
 scale = Vector2(1.5, 10)
 shape = SubResource("SegmentShape2D_pb13w")
 
+[node name="Killzone25" parent="Killzone" instance=ExtResource("9_7uk5p")]
+position = Vector2(1359, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone/Killzone25"]
+position = Vector2(-1100, 1143)
+scale = Vector2(30, 10)
+shape = SubResource("SegmentShape2D_pb13w")
+
 [node name="AnimatedPlatforms" type="Node" parent="."]
 
 [node name="Platform" parent="AnimatedPlatforms" instance=ExtResource("11_ctb2v")]
