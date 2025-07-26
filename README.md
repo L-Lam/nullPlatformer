@@ -1,5 +1,9 @@
-My first Godot game !!!
+This is my first Godot game! It is also my first game in general on a game engine.
 
-Null Platformer is... well... a platformer game. It is quite self explanatory, so give it a try.
+I learned the basics of gave development, GDScript, and the Godot Editor. This includes creating sprites and scenes, scripting, and combining all these factors together.
 
-I'll admit this game is very challenging, so be ready to waste an hour of your life.
+Thank you to @Spaghetti4433 for the background music.
+
+---------------------------------------------------------------------------------------------
+
+Welcome to Null Platformer! You are a curious traveler wandering the World of Null. The Null God has left you plenty of challenges for you to overcome.  Will you prove you are capable of venturing this world?
